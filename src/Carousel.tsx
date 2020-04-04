@@ -222,23 +222,23 @@ const Carousel: FC<any> = () => {
   const [width, setWidth] = useState(initialState);
   const [cards, setCards] = useState([{}]);
 
-  const leftVisible = (cards.length + 1) * 200 > width;
-  const rightVisible = cards.length > 1 && (width > (cards.length + 1) * 200 || width > (isMobile ? 275 : 600));
+  const leftVisible = (cards.length + 1) * 232 > width;
+  const rightVisible = cards.length > 1 && (width > (cards.length + 1) * 232 || width > (isMobile ? 275 : 600));
 
   const onLeft = () => {
     if (leftVisible) {
-      setWidth((w) => w + 200);
+      setWidth((w) => w + 232);
       if (d) {
-        d.style.width = `${width + 200}`;
+        d.style.width = `${width + 232}`;
       }
     }
   };
 
   const onRight = () => {
     if (rightVisible) {
-      setWidth((w) => w - 200);
+      setWidth((w) => w - 232);
       if (d) {
-        d.style.width = `${width - 200}`;
+        d.style.width = `${width - 232}`;
       }
     }
   };
