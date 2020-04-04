@@ -1,0 +1,119 @@
+.App {
+  height: 100vh;
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+.input {
+  :global(.MuiOutlinedInput-input) {
+    padding: 8px 16px;
+  }
+  :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: transparent;
+  }
+}
+.description {
+  :global(.MuiInputBase-input) {
+    padding: 8px 16px;
+  }
+  :global(.MuiInput-underline) {
+    border-bottom: none;
+    &::before {
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+  :global(.MuiInput-underline:after) {
+    border-bottom: none;
+  }
+  :global(.MuiInput-underline:hover:not(.Mui-disabled):before) {
+    border-bottom: none;
+  }
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+}
+
+.divide {
+  height: 32px;
+  position: relative;
+  left: 80px;
+  width: 1px;
+  border-right: 1px dashed lightgrey;
+}
+
+.icon {
+  position: relative;
+  left: 64px;
+}
+
+.typography {
+  position: relative;
+  left: 68px;
+  line-height: 32px;
+}
+
+.card {
+  height: 320px;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  width: 32px;
+  border-bottom: 1px dashed lightgrey;
+}
+
+.margin {
+  margin-right: 32px;
+}
+
+.cHolder {
+  @media screen and (max-width: 675px){
+    animation: animate-mobile cubic-bezier(0, 0, 1, 1) 0.7s;
+  }
+  @media screen and (min-width: 676px){
+    animation: animate cubic-bezier(0, 0, 1, 1) 0.7s;
+  }
+}
+@keyframes animate {
+  0% {
+    width: 800px;
+  }
+  20% {
+    width: 800px;
+  }
+  100% {
+    width: 600px;
+  }
+}
+@keyframes animate-mobile {
+  0% {
+    width: 500px;
+  }
+  20% {
+    width: 500px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+.scroller {
+  position: absolute;
+  top: 40%;
+  z-index: 56;
+  &.right {
+    right: -16px;
+  }
+  &.left {
+    left: -16px;
+  }
+}
+.imageUrl {
+  :global(.MuiOutlinedInput-multiline) {
+    padding: 8px 16px;
+  }
+}
