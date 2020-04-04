@@ -223,7 +223,7 @@ const Carousel: FC<any> = () => {
   const [cards, setCards] = useState([{}]);
 
   const leftVisible = (cards.length + 1) * 200 > width;
-  const rightVisible = (width > (cards.length + 1) * 200) || (width > (isMobile ? 275 : 600));
+  const rightVisible = cards.length > 1 && (width > (cards.length + 1) * 200 || width > (isMobile ? 275 : 600));
 
   const onLeft = () => {
     if (leftVisible) {
